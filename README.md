@@ -1,34 +1,48 @@
-# Viruses
-Collection of custom made viruses
+# Virus Collection
 
-# Purpose
-Test different types of viruses in controlled and monitored enviroments to promote ethical hacking.
+## Overview
+This repository contains custom-made viruses designed for educational and ethical hacking purposes. **Important**: These viruses are intended to be tested only in controlled and monitored environments.
 
-# Self replicating Virus
-Corrupt_files.c + Corrupt_fileV2.c
+## Purpose
+The purpose of this collection is to explore different types of viruses for ethical hacking by studying their behavior in safe environments.
 
-- Uses command line arguments in order to test in a controlled setting
-  - Use test folder
-- Copies data from every file into new directory doc
-- Prints itself in infected files
-  - Waits for files to be run in order to continue spreading
-- Working on new version which will use C's fork calls in order to create more processes running the virus
- 
-# Jammer
-Jammer.c
+---
 
-- Simple yet effective virus that uses C's system function in order to create an infinitely growing funciton
-- Program is safegaurded by exit statements and quotes in system call
- - Will not run as intended without removing the following:
-   printf("DO NOT RUN!\nExiting...\n");
-    exit(0);
-   
-   * And replacing the following *
-     system(“dir>>â.ša.exe”);
-     with
-     system(dir>>â.ša.exe);
-     
-- Do NOT run with the above changes
-- Run at your own risk
+### Self-Replicating Virus
 
-Hoping to add more viruses in the future
+#### Files:
+- `Corrupt_files.c`
+- `Corrupt_fileV2.c`
+
+#### Description:
+- Uses command-line arguments to test in a controlled setting.
+- Operates within a **test folder** to avoid system-wide damage.
+- Copies data from all files into a new directory named `doc`.
+- Self-replicates by inserting its code into infected files.
+- Waits for infected files to be executed before spreading further.
+- **Upcoming Feature**: A new version utilizing C's `fork()` function to create additional processes, enhancing the virus’s spread.
+
+---
+
+### Jammer Virus
+
+#### File:
+- `Jammer.c`
+
+#### Description:
+- A simple but effective virus that leverages C's `system()` function to create an infinitely growing process.
+- The virus is **safeguarded** by an exit statement that prevents it from running unintentionally.
+
+**Safe Version**:
+```c
+printf("DO NOT RUN!\nExiting...\n");
+exit(0);
+```
+
+**Dangerous Version**:
+```c
+system("dir>>â.ša.exe");
+```
+
+### Disclaimer
+These viruses are strictly for educational and research purposes. Running these programs in an uncontrolled environment may lead to unintended consequences. Proceed at your own risk.
