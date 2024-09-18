@@ -11,8 +11,8 @@ The purpose of this collection is to explore different types of viruses for ethi
 ### Self-Replicating Virus
 
 #### Files:
-- `Corrupt_files.c`
-- `Corrupt_fileV2.c`
+- `corrupt_files.c`
+- `corrupt_fileV2.c`
 
 #### Description:
 - Uses command-line arguments to test in a controlled setting.
@@ -27,7 +27,7 @@ The purpose of this collection is to explore different types of viruses for ethi
 ### Jammer Virus
 
 #### File:
-- `Jammer.c`
+- `jammer.c`
 
 #### Description:
 - A simple but effective virus that leverages C's `system()` function to create an infinitely growing process.
@@ -45,4 +45,7 @@ system("dir>>â.ša.exe");
 ```
 
 ### Disclaimer
-These viruses are strictly for educational and research purposes. Running these programs in an uncontrolled environment may lead to unintended consequences. Proceed at your own risk.
+These viruses are strictly for educational and research purposes. Running these programs in an uncontrolled environment may lead to unintended consequences. **Proceed at your own risk**.
+
+### Future Plans
+Adding more virus types and features to further explore ethical hacking methods.
